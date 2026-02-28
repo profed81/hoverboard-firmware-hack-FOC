@@ -1591,7 +1591,7 @@ void poweroffPressCheck(void) {
         if (HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN)) {  // Double press: Adjust Max Current, Max Speed
           while(HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN)) { HAL_Delay(10); }
           beepLong(8);
-          updateCurSpdLim();
+          //updateCurSpdLim();
           beepShort(5);
         } else {                                          // Long press: Calibrate ADC Limits
           #ifdef AUTO_CALIBRATION_ENA
